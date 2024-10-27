@@ -29,6 +29,23 @@ body::before {
   z-index: -1;
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(92, 184, 179, 1) 0%,   /* #5CB8B3 - full opacity */
+    rgba(100, 50, 132, 1) 50%,  /* #643284 - full opacity */
+    rgba(244, 130, 100, 1) 100%  /* #F48264 - full opacity */
+  );
+  opacity: 0.6; /* Overall transparency level for the gradient */
+  z-index: -1; /* Ensure this is below other content */
+}
+
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
